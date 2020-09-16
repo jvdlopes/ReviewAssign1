@@ -20,7 +20,7 @@ public class PizzzaCost1 {
         System.out.print("How many toppings >> ");
         TopNum = s.nextInt();
         TopCost = TopNum * .75;
-        TotalCost = TopCost + PizzaCost + 1.5 + .75;
+        TotalCost = TopCost + PizzaCost + labour + heat;
         System.out.println(String.format("Your total cost is $%.2f", TotalCost));
     }
     
