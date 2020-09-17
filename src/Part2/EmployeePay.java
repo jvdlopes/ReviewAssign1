@@ -11,6 +11,7 @@ public class EmployeePay {
         double totaltotal = 0;
         int hours;
         Scanner s = new Scanner(System.in);
+        
 
         for (int X = 1; X <= 5; X++) {
 

@@ -1,6 +1,8 @@
 
 package Part2;
 
+import java.text.NumberFormat;
+
 
 public class SalaryTable {
 
@@ -8,6 +10,7 @@ public class SalaryTable {
     public static void main(String[] args) {
         int raise, newsal;
         int oldsal = 40000;
+        NumberFormat nf = NumberFormat.getNumberInstance();
         
         System.out.format("%5s", "YEAR");
         System.out.format("%20s", "OLD SALARY");
@@ -27,9 +30,9 @@ public class SalaryTable {
             raise = (int) (0.03 * (int)oldsal);
             newsal = oldsal + raise;
             System.out.format("%5s", x);
-            System.out.format("%20s", "$" + oldsal);
-            System.out.format("%15s", "$" + raise);
-            System.out.format("%20s\n", "$" + newsal);
+            System.out.format("%20s", "$" + nf.format(oldsal));
+            System.out.format("%15s", "$" + nf.format(raise));
+            System.out.format("%20s\n", "$" + nf.format(newsal));
             oldsal = newsal;
         }
     }
